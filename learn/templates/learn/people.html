@@ -1,0 +1,26 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<br>
+
+<div class="d-flex justify-content-center">
+    {% for people in people %}
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h2 class="card-title">{{ people.title }}</h2>
+            <br>
+            <h6 class="card-subtitle mb-2 text-muted">{{ people.topic_1 }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{ people.topic_2 }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{ people.topic_3 }}</h6>
+            <br>
+            <p class="card-text">{{ people.description }}</p>
+            <a href="{{ people.url_1 }}" class="card-link" target="_blank">Twitter</a>
+            <a href="{{ people.url_2 }}" class="card-link" target="_blank">Website</a>
+          </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

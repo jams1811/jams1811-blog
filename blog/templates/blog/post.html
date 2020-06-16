@@ -1,0 +1,10 @@
+<!-- Import the base from base template -->
+{% extends 'portfolio/base.html' %}
+<!-- Import the block from base template -->
+{% block content %}
+
+    <h1>{{ blog.title }}</h1>
+
+    <h2>{{ blog.description|safe }}</h2>
+
+{% endblock %}

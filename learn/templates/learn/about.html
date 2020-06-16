@@ -1,0 +1,58 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!doctype html>
+
+
+  <center>
+    <div class="d-flex justify-content-center">
+      {% for about in about %}
+      <div class="col-lg-10 col-md-5">
+        <html lang="en">
+          <head>
+            <br><br>
+            <h1>{{ about.title }}</h1>
+            <br>
+            <h5>{{ about.description }}</h5>
+            <br>
+          </head>
+          <body>
+            <p style="text-align:left">If you're reading this you probably found me on twitter or online somewhere which means I did something right to catch your attention. As this is a personal project which I have not mentioned to friends or family at all. So please now, keep reading.<br><br>
+              First a bit of background on me. I'm a decently paid and well on the way to be a successful sales / commercial professional in the tech scene in London. I've been living in this fantastic city for almost 6 years, I'm 33 years old and originally from South America. So I'll start by saying I am not unhappy about my life, I am not doing this to quit my job as soon as possible and I do not hate anything going on with my life. I'm doing this to challenge myself. To prove myself that I can do it.<br><br><b>The goal:</b> Freedom and location independence by having a healthy side Income and have a deep understanding of tech and the e-commerce world.<br>
+              <b>The method:</b> learn, learn, learn, build.<br><b>The key:</b> Be consistent.</p><br>
+          <h2>Project Condor</h2>
+        <br><br>
+        <p style="text-align:left">Having no intention of leaving my current job in the next 3-5 years (mainly because I enjoy it, love the people and I believe it can get to be a 500M company) I will attempt to build a sustainable side Income while at the same time learning skills and experiments that will give me great understanding of the different technologies involved.<br><br>
+          The whole project starts with this website for which I have learned the basics of programming (Python) and Frameworks (Django) and worked on it for 1 month. Here I will document and test my learnings, tools and try on new skills that I develop during this process. I will link this to my main Twitter account @Jams1811 which will serve as almost a diary and posts to remind myself of important bits and connect with prove that teach me something.<br><br>
+          This site is supposed to be messy, fun, educational and scrappy. Just like any learning process. This is learning in real time.<br><br>
+          Then I will divide the project into 3 sub projects, all of them supposed to teach me something new and test a different way of making a side income. There will be no connection between this page and the other projects, so you won't find any names here. But here is a general idea:<br><br>
+          <b>Project #1:</b><br><br>
+          An educational platform where I will leverage content from other people to generate traffic and bring content to more people. I will do this in my native language, so a big audience that would not normally follow these people. The goal is to build a community that I can monetise through newsletter and/or affiliate marketing.<br><br>
+          <b>Key tools:</b> Wordpress/Squarespace optimisation. Newsletter tactics. Data analysis.<br>
+          <b>Key takeaways:</b> How to build a community. Engagement.<br><br>
+          <b>Project #2:</b><br><br>
+          Dropshipping online store. Pick winner products, optimise the messaging and advertising and make a profit. This is the most straightforward project where the goal is to master e-commerce and understand winner products.<br><br>
+          <b>Key tools:</b> Shopify. Design tools and concepts. Messaging and Copy, Data analysis.<br>
+          <b>Key takeaways:</b> How to communicate with consumers. Improve conversion. Design, Design, Design.<br><br>
+          <b>Project #3:</b><br><br>
+          The project of the projects. I've been working for quite some time on a tool I desperately need at work. It would automate several key processes we currently do on spreadsheets and it would save our company time and money. And I seriously think is not hard to build.<br><br>
+          <b>Key things to learn:</b> Python. Web applications Frameworks. Databases. How get to PoC quickly.<br>
+          <b>Key takeaways:</b> Programming. A stepping stone to Computer science.<br><br>
+          So as you see there's a lot going on. But I have to say I am not starting from scratch. I already have basic programming skills, I've worked with website Frameworks, Shopify stores and I currently work at a Startup reaching $2M ARR selling enterprise SaaS. So I'm not unfamiliar with any of these. The challenging part is that I will be doing this in 2-3 hours a day. So it will take some time and I have give myself some deadlines / milestones:<br><br>
+          <b>*</b> Have a working prototype of each project before end of 2020.<br>
+          <b>*</b> Make $100 USD online un 2020.<br>
+          <b>*</b> Have a working sell-able product for Project #3 by 2021.<br>
+          <b>*</b> Maintain my sales growth at my job to 200% a year as per usual.<br><br>
+          These are the conditions. I will make this site and personal twitter account @jams1811 my journal to post daily what I'm working on, learning on courses, reading and thinking about. It will not be pretty but I am an effective worker and I think I can pull it off. Any recommendations will always be welcome and also some kick in the head of things don't seem to progress. I will provide places on this site to do so.<br><br>
+          Worst case scenario I end up with a better understanding of everything here. This is already worth it. Welcome to my journey and I hope you enjoy it as much as I will.</p>
+          <br><br>
+        <p style="text-align:center">Jams1811</p>
+          </body>
+        </html>
+      </div>
+      {% endfor %}
+    </div>
+  </center>
+{% endblock %}

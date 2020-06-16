@@ -1,0 +1,61 @@
+<!-- Import the base from base template -->
+{% extends 'portfolio/base.html' %}
+<!-- Import the block from base template -->
+{% block content %}
+{% load static %}
+
+    <br>
+    <br>
+
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-9 text-center">
+    <br><h2>I write about my learnings | A journey towards freedom | Learning to make, making to learn</h2><br><h3>Consistency, accountability and creativity</h3><br><br>
+      </div>
+    </div>
+    {% load static %}
+
+    <center>
+        <img src="{% static 'portfolio\Sky red.jpg' %}" height=450, width=500>
+    </center>
+
+    <br>
+    <br>
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="{% url 'learn:people' %}">People I follow</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'learn:article' %}">Articles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'learn:book' %}">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'learn:course' %}">Courses</a>
+      </li>
+    </ul>
+
+    <br>
+    <br>
+    <center>
+  <div class="d-flex justify-content-center">
+      {% for project in projects %}
+      <div class="col-lg-3 col-md-6">
+
+        {% if project.url %}
+        <a href="{{ project.url }}">
+          <img src="{{ project.image.url }}" class="img-fluid mb-2" height=900, width=300>
+        </a>
+        {% else %}
+
+        <img src="{{ project.image.url }}" class="img-fluid mb-2" height=900, width=300>
+        {% endif %}
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+
+      </div>
+      {% endfor %}
+  </div>
+    </center>
+{% endblock %}
