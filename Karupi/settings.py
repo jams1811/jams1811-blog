@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$a)fcm!08qh$v$0+r&jq3nj1uy&8vij-&8485_5*qw33=#tmu('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False #this needs to be pushed to the live site.
 
 ALLOWED_HOSTS = ['jams1811.pythonanywhere.com']
 
