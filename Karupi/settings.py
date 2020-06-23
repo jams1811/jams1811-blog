@@ -23,9 +23,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$a)fcm!08qh$v$0+r&jq3nj1uy&8vij-&8485_5*qw33=#tmu('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False #this needs to be pushed to the live site.
+DEBUG = False #this needs to be changed to False and pushed to the live site.
 
-ALLOWED_HOSTS = ['jams1811.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    'jams1811.pythonanywhere.com',
+    'localhost',
+]
 
 
 # Application definition
@@ -122,5 +125,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT =  os.path.join(BASE_DIR, 'static')
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+
+try:
+    from .local_settings.py import *
+except ImportError:
+    print("Watch Out, you must in on production")
